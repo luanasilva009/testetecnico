@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="./card.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+    <title>Pessoas Cadastradas</title>
+</head>
+
+<body>
+    <div id="overlay" class="overlay"></div>
+    <header>
+        <nav class="nav-bar flex">
+            <div class="nav-bar-left flex">
+                <button id="hamburguer-button" aria-label="Menu principal" class="hamburguer-button"
+                    aria-controls="menu" aria-expanded="false">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <img src="../imagens/logo.png" alt="Logo" />
+                <p>Federação Paulista de Futebol </p>
+            </div>
+
+            <div class="nav-bar-right flex">
+                <div class="user-icon-container">
+                    <img src="../imagens/icon.png" alt="Ícone imagem usuário" id="user-icon" />
+                    <i class="mdi mdi-menu-down" id="user-menu-arrow"></i>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button id="logout-button">Deslogar</button>
+                    </div>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+
+    <div id="menu" class="menu">
+        <button id="close-button" aria-label="Fechar menu" class="close-button">X</button>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li id="new-user-button"  class="add-user-btn"><a>Cadastrar novo usuário</a></li>
+        </ul>
+    </div>
+
+    <main id="main-content">
+        <h1>Pessoas Cadastradas</h1>
+        <div class="card-container" id="people-cards"></div>
+    </main>
+
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" aria-label="Fechar" class="close-btn">&times;</span>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <script src="../javascript/mask.js"></script>
+    <script src="../javascript/card.js"></script>
+</body>
+
+</html>
